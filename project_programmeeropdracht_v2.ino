@@ -4,6 +4,7 @@
 // De Serial1 verbinding wordt hier verklaard naar xbee
 #define xbee Serial1 
 
+//Buzzer controller voor de buzzer
 class BuzzerController {
 private:
     Zumo32U4Buzzer buzzer;
@@ -15,12 +16,14 @@ public:
     }
 };
 
+//Led controller voor de led
 class LedController {
 public:
     LedController();
 
     }
     void startLed() {
+      //De gele led gaat aan en uit
       ledYellow(1);
       delay(1000);
       ledYellow(0);
@@ -28,6 +31,7 @@ public:
     }
 };
 
+//BatteryController voor de batterij
 class BatteryController {
 public:
     BatteryController();
